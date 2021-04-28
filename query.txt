@@ -11,6 +11,7 @@ SELECT * FROM `ospiti` WHERE ( YEAR(CURRENT_DATE()) - YEAR(`date_of_birth`) ) >=
 SELECT * FROM `ospiti` WHERE `name` LIKE 'd%'
 
 5) Calcola il totale degli ordini accepted
+SELECT SUM(`price`) FROM `pagamenti` WHERE `status` = 'accepted'
 
 6) Qual è il prezzo massimo pagato?
 7) Seleziona gli ospiti riconosciuti con patente e nati nel 1975

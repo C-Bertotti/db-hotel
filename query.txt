@@ -8,7 +8,10 @@ SELECT * FROM `ospiti` WHERE `date_of_birth` > '1988-31-12';
 SELECT * FROM `ospiti` WHERE ( YEAR(CURRENT_DATE()) - YEAR(`date_of_birth`) ) >= 20
 
 4) Seleziona tutti gli ospiti il cui nome inizia con la D
+SELECT * FROM `ospiti` WHERE `name` LIKE 'd%'
+
 5) Calcola il totale degli ordini accepted
+
 6) Qual è il prezzo massimo pagato?
 7) Seleziona gli ospiti riconosciuti con patente e nati nel 1975
 8) Quanti posti letto ha l’hotel in totale?

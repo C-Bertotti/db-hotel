@@ -38,6 +38,7 @@ INNER JOIN `ospiti`
 ON `prenotazioni_has_ospiti`.`ospite_id` = `ospiti`.`id`
 GROUP BY `ospite_id`
 ORDER BY `tot_prenotazioni` DESC
+LIMIT 1
 
 
 JOIN

@@ -8,7 +8,7 @@ GROUP BY `anno_nascita`
 
 2) Somma i prezzi dei pagamenti raggruppandoli per status
 
-SELECT `status`, SUM(`id`) AS 'tot'
+SELECT `status`, SUM(`price`) AS 'tot'
 FROM `pagamenti`
 GROUP BY `status`
 

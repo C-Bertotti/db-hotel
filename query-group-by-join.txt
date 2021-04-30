@@ -1,11 +1,17 @@
 GROUP BY
 1) Conta gli ospiti raggruppandoli per anno di nascita
+
 SELECT YEAR(`date_of_birth`) AS 'anno_nascita', COUNT(`id`) AS 'tot'
 FROM `ospiti`
 GROUP BY `anno_nascita`
 
+
 2) Somma i prezzi dei pagamenti raggruppandoli per status
-SELECT `status`, SUM(`price`) FROM `pagamenti` GROUP BY `status`
+
+SELECT `status`, SUM(`id`) AS 'tot'
+FROM `pagamenti`
+GROUP BY `status`
+
 
 3) Conta quante volte è stata prenotata ogni stanza
 SELECT `stanza_id`, COUNT(`id`) FROM `prenotazioni` GROUP BY `stanza_id`

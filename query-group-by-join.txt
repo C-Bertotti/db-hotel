@@ -32,6 +32,13 @@ ORDER BY `tot_prenotazioni` DESC
 
 5) Quante prenotazioni ha fatto l’ospite che ha fatto più prenotazioni?
 
+SELECT `ospite_id`, `ospiti`.`name`, `ospiti`.`lastname`, COUNT(`prenotazioni_has_ospiti`.`id`) AS 'tot_prenotazioni'
+FROM `prenotazioni_has_ospiti`
+INNER JOIN `ospiti`
+ON `prenotazioni_has_ospiti`.`ospite_id` = `ospiti`.`id`
+GROUP BY `ospite_id`
+ORDER BY `tot_prenotazioni` DESC
+
 
 JOIN
 1) Come si chiamano gli ospiti che hanno fatto più di due prenotazioni?

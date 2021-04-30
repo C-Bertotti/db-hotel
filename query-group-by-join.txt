@@ -1,6 +1,8 @@
 GROUP BY
 1) Conta gli ospiti raggruppandoli per anno di nascita
-SELECT YEAR(`date_of_birth`), COUNT(`id`) FROM `ospiti` GROUP BY YEAR(`date_of_birth`)
+SELECT YEAR(`date_of_birth`) AS 'anno_nascita', COUNT(`id`) AS 'tot'
+FROM `ospiti`
+GROUP BY `anno_nascita`
 
 2) Somma i prezzi dei pagamenti raggruppandoli per status
 SELECT `status`, SUM(`price`) FROM `pagamenti` GROUP BY `status`

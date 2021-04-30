@@ -80,3 +80,8 @@ ON `prenotazioni`.`stanza_id` = `stanze`.`id`
 WHERE `prenotazioni`.`id` = 7
 
 6) Le stanze sono state tutte prenotate almeno una volta? (Visualizzare le stanze non ancora prenotate) 
+SELECT `stanze`.`room_number` AS 'stanze_non_prenotate' 
+FROM `stanze`
+LEFT JOIN `prenotazioni`
+ON `stanze`.`id` = `prenotazioni`.`stanza_id`
+WHERE `prenotazioni`.`stanza_id` IS NULL
